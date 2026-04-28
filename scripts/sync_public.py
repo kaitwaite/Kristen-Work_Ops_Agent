@@ -81,11 +81,6 @@ def sync(dry_run=False, push=False):
         for item in DEST.iterdir():
             if item.name in (".git", ".gitignore", "README.md"):
                 continue
-            # Preserve manually-authored public-only files
-            preserve_paths = {"ops/brag-list.md"}
-            rel_item = str(item.relative_to(DEST))
-            if rel_item in preserve_paths:
-                continue
             if item.is_dir():
                 shutil.rmtree(item)
             else:
@@ -125,6 +120,12 @@ def sync(dry_run=False, push=False):
         for s in skipped:
             print(f"  SKIP  {s}")
         return
+
+    # Write public stubs (manually-authored replacements for excluded private files)
+    for stub_path, stub_content in config.get("public_stubs", {}).items():
+        dest_stub = DEST / stub_path
+        dest_stub.parent.mkdir(parents=True, exist_ok=True)
+        dest_stub.write_text(stub_content, encoding="utf-8")
 
     print(f"Synced {len(copied)} files, skipped {len(skipped)}")
 
