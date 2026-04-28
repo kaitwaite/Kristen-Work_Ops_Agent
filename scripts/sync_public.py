@@ -81,6 +81,11 @@ def sync(dry_run=False, push=False):
         for item in DEST.iterdir():
             if item.name in (".git", ".gitignore", "README.md"):
                 continue
+            # Preserve manually-authored public-only files
+            preserve_paths = {"ops/brag-list.md"}
+            rel_item = str(item.relative_to(DEST))
+            if rel_item in preserve_paths:
+                continue
             if item.is_dir():
                 shutil.rmtree(item)
             else:
