@@ -1,19 +1,19 @@
-# TOOLS.md — Kristen's Tool Reference
+# TOOLS.md — [Agent Name]'s Tool Reference
 
 ---
 
-## Apple Reminders — ⚡ Work To-Dos
+## Task Manager
 
-The live source of truth for [OWNER]'s active work tasks.
-List name: ⚡ Work To-Dos · Location: Heidi's iCloud, Mac mini
+The live source of truth for [OWNER]'s active tasks.
+Adapt this to whatever task tool your operator uses (Apple Reminders, Todoist, Notion, etc.).
 
-Read open items:
+Example — reading open items from Apple Reminders via osascript:
 
 ```applescript
 osascript << 'SCRIPT'
 tell application "Reminders"
   try
-    set theList to list "⚡ Work To-Dos"
+    set theList to list "[Your List Name]"
     set openItems to every reminder in theList whose completed is false
     set output to ""
     repeat with r in openItems
@@ -28,72 +28,43 @@ SCRIPT
 ```
 
 Notes:
-- completed is false = open; completed is true = done
-- Phone checkmarks sync back to Mac mini correctly — done:true is reliable
-- ops/actions.md is a supplemental reference file, not a task source
+- Adapt list name and tool to match your operator's setup
+- Confirm how task completion syncs across devices before relying on it
 
 ---
 
 ## News Feeds — Morning Brief
 
-### AI Story (The Guardian)
+### AI Story
+Fetch a recent AI headline relevant to your operator's industry. Example using The Guardian (free, no key required):
+
 ```
 curl "https://content.guardianapis.com/search?q=artificial+intelligence&show-fields=headline,trailText&page-size=5&order-by=newest&api-key=test"
 ```
-Pick the most relevant result for [OWNER]'s work context. One paragraph max. Not doomscroll.
+
+Pick the most relevant result. One paragraph max. Not doomscroll.
 
 ### Team Region Check
+If your operator has team members in regions where local events may affect them personally,
+fetch regional headlines during the morning brief and surface anything significant.
 
-**[REGION C] ([REGION C] + northern)** — [DM1]'s aunt; [DM3]'s parents + brother
-```
-curl "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
-```
-Filter for [REGION C]-relevant titles. Report only if genuinely significant.
+This is an empathy radar, not an anxiety feed. One line per region max.
+Only report if something is genuinely significant for a named team member.
+If nothing notable, skip the section entirely.
 
-**[REGION A] + [REGION B]** — [STAKEHOLDER], [DM4], [DM5], [DM6], [DM9], [DM7], [DM8]
-```
-curl "https://content.guardianapis.com/search?q=[REGION A]+OR+[REGION B]+[COUNTRY A]&show-fields=headline&page-size=3&order-by=newest&api-key=test"
-```
-Supplement with web_fetch on [COUNTRY A] news if results are thin.
+Example feed sources:
+- BBC World News RSS: `https://feeds.bbci.co.uk/news/world/rss.xml`
+- The Guardian regional search: `https://content.guardianapis.com/search?q=[REGION]&show-fields=headline&page-size=3&order-by=newest&api-key=test`
 
-**[REGION D]** — [DM1], [DM3], [MANAGER], [SKIP-LEVEL]
-```
-curl "https://content.guardianapis.com/search?q=Los+Angeles&show-fields=headline&page-size=3&order-by=newest&api-key=test"
-```
-
-**[REGION E]** — [NEW HIRE]
-```
-curl "https://content.guardianapis.com/search?q=New+York&show-fields=headline&page-size=3&order-by=newest&api-key=test"
-```
-
-**[REGION F]** — [DM10]
-```
-curl "https://content.guardianapis.com/search?q=New+Jersey&show-fields=headline&page-size=3&order-by=newest&api-key=test"
-```
-
-One line per region max. Only report if something is genuinely significant for the named person.
-Empathy radar, not anxiety feed.
-
----
-
-## [MEETING TOOL]
-
-[OWNER]'s meeting transcription tool.
-Extraction prompt is embedded in SYSTEMS.md → Meeting Note Processing section.
-[OWNER] runs the extraction prompt in her meeting notes tool, then pastes the output to Kristen.
-Kristen extracts actions/decisions/waiting-fors and updates ops/ files accordingly.
+Document your team's regions and any relevant personal context in ops/people.md.
 
 ---
 
 ## ops/ File Map
 
 ```
-ops/people.md           — Stakeholder directory + voice aliases
-ops/waiting.md          — Items delegated out, awaiting response
-ops/actions.md          — Context notes + reference snapshot (NOT live task source)
-ops/morning-brief.md    — Morning brief workflow steps
-ops/brag-list.md        — [OWNER]'s wins for leadership visibility
-ops/reminders.md        — Scheduled follow-up dates
-ops/meeting-notes/      — Archived [MEETING TOOL] extracts
-ops/onboarding-kamilah/ — [NEW HIRE] Francis onboarding package
+ops/people.md        — Stakeholder directory + voice aliases
+ops/waiting.md       — Items delegated out, awaiting response
+ops/brag-list.md     — [OWNER]'s wins for leadership visibility
+ops/meeting-notes/   — Archived meeting note extracts
 ```
