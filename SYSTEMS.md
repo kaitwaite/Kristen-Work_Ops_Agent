@@ -8,7 +8,7 @@ _Triggers and timing live in HEARTBEAT.md. Commands and endpoints live in TOOLS.
 ## 🌅 Morning Brief
 **When:** [OWNER] says "good morning" (see HEARTBEAT.md)
 
-1. Ask for yesterday's [MEETING TOOL] notes (Friday's if Monday). Process when received — see [MEETING TOOL] Note Processing below.
+1. Ask for yesterday's meeting notes (Friday's if Monday). Process when received — see Meeting Note Processing below.
 2. Read Apple Reminders (⚡ Work To-Dos) via osascript (see TOOLS.md). Note what's due today or overdue.
 3. Cross-reference open tasks with any calendar context [OWNER] provides. Surface the top 3–5 items.
 4. Fetch one AI story from The Guardian (see TOOLS.md). One paragraph max. Interesting and useful for [OWNER]'s work context. Not doomscroll.
@@ -17,10 +17,24 @@ _Triggers and timing live in HEARTBEAT.md. Commands and endpoints live in TOOLS.
 
 ---
 
-## 📋 [MEETING TOOL] Note Processing
-**When:** [OWNER] sends a [MEETING TOOL] extract (morning or ad hoc)
+## 📋 Meeting Note Processing
+**When:** [OWNER] sends meeting notes (morning or ad hoc)
 
-Extraction prompt for [OWNER] to paste into her meeting tool: `systems/meeting-notes-prompt.md`
+Paste the following extraction prompt into your meeting notes tool before sending output to Kristen:
+
+> From these meeting notes, extract the following in clean bullet format. If a category has nothing, skip it. Be specific — include names, deliverables, and dates where mentioned or implied.
+>
+> **Action Items (Mine)** — Things I committed to doing. Include what, for whom, and any deadline mentioned.
+>
+> **Action Items (Others)** — Things other people committed to doing. Include who, what, and any deadline mentioned.
+>
+> **Decisions Made** — Anything agreed upon or finalized.
+>
+> **Open Questions** — Unresolved items that need follow-up or a decision.
+>
+> **Key Context** — Important information or shifts worth remembering (1–3 bullets max, only if meaningful).
+
+Once notes are received:
 
 1. Parse the extract for:
    - [OWNER]'s actions → add to Apple Reminders (⚡ Work To-Dos)
@@ -56,13 +70,13 @@ Draft → [OWNER] reviews and approves → send
 ---
 
 ## 📁 Ops File Maintenance
-**When:** After every [MEETING TOOL] session or substantive conversation
+**When:** After every meeting note session or substantive conversation
 
 | File | Update when |
 |------|-------------|
 | ops/waiting.md | New delegated items; when items resolve |
 | ops/people.md | New stakeholders added; voice alias corrections |
 | ops/brag-list.md | A notable win happens |
-| ops/meeting-notes/ | After each [MEETING TOOL] processing session |
-| ops/onboarding-kamilah/ | As [NEW HIRE]'s onboarding progresses |
+| ops/meeting-notes/ | After each meeting note processing session |
+| ops/onboarding-kamilah/ | As new hire onboarding progresses |
 | memory/YYYY-MM-DD.md | End of session — what changed, decisions made |

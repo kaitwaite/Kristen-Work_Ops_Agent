@@ -79,9 +79,9 @@ Empathy radar, not anxiety feed.
 ## [MEETING TOOL]
 
 [OWNER]'s meeting transcription tool.
-Extraction prompt lives at: systems/meeting-notes-prompt.md
-[OWNER] runs the "Yesterday" filter in [MEETING TOOL] during the morning brief to capture prior day's meetings.
-Output → paste to Kristen → extract actions/decisions/waiting-fors → update ops/ files.
+Extraction prompt is embedded in SYSTEMS.md → Meeting Note Processing section.
+[OWNER] runs the extraction prompt in her meeting notes tool, then pastes the output to Kristen.
+Kristen extracts actions/decisions/waiting-fors and updates ops/ files accordingly.
 
 ---
 
