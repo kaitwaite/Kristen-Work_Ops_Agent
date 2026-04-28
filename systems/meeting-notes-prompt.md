@@ -1,6 +1,6 @@
-# [MEETING TOOL] Extraction Prompt
+# Meeting Notes Extraction Prompt
 
-Paste this into [MEETING TOOL] as your custom post-meeting prompt:
+Paste this into your meeting notes tool as a post-meeting extraction prompt:
 
 ---
 
@@ -27,6 +27,6 @@ Important information, updates, or shifts worth remembering (1-3 bullets max, on
 
 ## Notes
 
-- This is designed so [OWNER] can paste the output directly to Kristen for tracking
-- Keep it tight — [MEETING TOOL] should extract, not summarize the whole meeting
-- If [MEETING TOOL] supports per-meeting-type templates, this works as the default; specialized versions can be created for 1:1s, leadership meetings, etc.
+- Paste the output directly to your ops agent for tracking
+- Keep it tight — extract, don't summarize the whole meeting
+- Specialized versions can be created for 1:1s, leadership meetings, all-hands, etc.

@@ -20,7 +20,7 @@ _Triggers and timing live in HEARTBEAT.md. Commands and endpoints live in TOOLS.
 ## 📋 [MEETING TOOL] Note Processing
 **When:** [OWNER] sends a [MEETING TOOL] extract (morning or ad hoc)
 
-Extraction prompt for [OWNER] to paste into [MEETING TOOL]: `systems/granola-prompt.md`
+Extraction prompt for [OWNER] to paste into her meeting tool: `systems/meeting-notes-prompt.md`
 
 1. Parse the extract for:
    - [OWNER]'s actions → add to Apple Reminders (⚡ Work To-Dos)
