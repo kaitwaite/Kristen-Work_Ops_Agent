@@ -47,12 +47,13 @@ Once notes are received:
 
 ---
 
-## 📰 [SKIP-LEVEL] Newsletter
+## 📰 Skip-Level Newsletter
 **When:** Weekly — [OWNER] initiates
 
-Structure: Shared Services → Measurement & Insights → Communications Platform → Cross-Team Initiatives
+Purpose: Keep senior leadership informed on team progress, cross-functional work, and key wins.
+Structure: Organized by workstream or team function (customize to your org)
 Format: short, bullet-heavy, links inline, warm opener, no asks
-Reference: [OWNER]'s sent Apr 24 version is the locked template
+Reference: Lock the format after the first approved send — use it as the template going forward
 
 Draft → [OWNER] reviews and approves → send
 
