@@ -44,29 +44,29 @@ Pick the most relevant result for [OWNER]'s work context. One paragraph max. Not
 
 ### Team Region Check
 
-**Iran (Tehran + northern)** — [DM1]'s aunt; [DM3]'s parents + brother
+**[REGION C] ([REGION C] + northern)** — [DM1]'s aunt; [DM3]'s parents + brother
 ```
 curl "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
 ```
-Filter for Iran-relevant titles. Report only if genuinely significant.
+Filter for [REGION C]-relevant titles. Report only if genuinely significant.
 
-**Guadalajara + Aguascalientes** — [STAKEHOLDER], [DM4], [DM5], [DM6], [DM9], [DM7], [DM8]
+**[REGION A] + [REGION B]** — [STAKEHOLDER], [DM4], [DM5], [DM6], [DM9], [DM7], [DM8]
 ```
-curl "https://content.guardianapis.com/search?q=Guadalajara+OR+Aguascalientes+Mexico&show-fields=headline&page-size=3&order-by=newest&api-key=test"
+curl "https://content.guardianapis.com/search?q=[REGION A]+OR+[REGION B]+[COUNTRY A]&show-fields=headline&page-size=3&order-by=newest&api-key=test"
 ```
-Supplement with web_fetch on Mexico news if results are thin.
+Supplement with web_fetch on [COUNTRY A] news if results are thin.
 
-**Los Angeles** — [DM1], [DM3], [MANAGER], [SKIP-LEVEL]
+**[REGION D]** — [DM1], [DM3], [MANAGER], [SKIP-LEVEL]
 ```
 curl "https://content.guardianapis.com/search?q=Los+Angeles&show-fields=headline&page-size=3&order-by=newest&api-key=test"
 ```
 
-**New York** — [NEW HIRE]
+**[REGION E]** — [NEW HIRE]
 ```
 curl "https://content.guardianapis.com/search?q=New+York&show-fields=headline&page-size=3&order-by=newest&api-key=test"
 ```
 
-**New Jersey** — [DM10]
+**[REGION F]** — [DM10]
 ```
 curl "https://content.guardianapis.com/search?q=New+Jersey&show-fields=headline&page-size=3&order-by=newest&api-key=test"
 ```
