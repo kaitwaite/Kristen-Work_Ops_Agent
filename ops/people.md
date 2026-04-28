@@ -34,9 +34,9 @@ _Voice transcription aliases in parentheses_
 - **[STAKEHOLDER]** — AVP (escalation contact for resourcing; same)
 - **[STAKEHOLDER]** — GBS; creating accounts post-training _(Apr 24 SF L1)_
 
-## [DATA TOOL] Team (external)
-- **[STAKEHOLDER]** (Sonny) — [DATA TOOL], sending curated slide deck
-- **[STAKEHOLDER]** — [DATA TOOL], bi-weekly office hours with [OWNER]'s team
+## Snowflake Team (external)
+- **[STAKEHOLDER]** (Sonny) — Snowflake, sending curated slide deck
+- **[STAKEHOLDER]** — Snowflake, bi-weekly office hours with [OWNER]'s team
 
 ## Other Stakeholders
 - **[STAKEHOLDER] / Crissi** (Christie) — wireframe URL + engineering diagram
@@ -67,9 +67,9 @@ _Voice transcription aliases in parentheses_
 - **[STAKEHOLDER] Dargo** — brand site redesign
 - **[STAKEHOLDER]** — SFMC, ATHR request
 - **[STAKEHOLDER]** — [LOCALIZATION TOOL] renewal/volume negotiations
-- **[STAKEHOLDER] / [STAKEHOLDER]** — [DATA TOOL] documentation
+- **[STAKEHOLDER] / [STAKEHOLDER]** — Snowflake documentation
 - **Alex** — model context team, CLV model
-- **[STAKEHOLDER]** — [DATA TOOL]/Cocoa access team
+- **[STAKEHOLDER]** — Snowflake/Cocoa access team
 - **[STAKEHOLDER]** — Skin/Eye dashboard requirements
 - **[CONTACT]** — Glue Club new member welcome (Apr 29)
 - **[STAKEHOLDER]** — executive dashboard feedback

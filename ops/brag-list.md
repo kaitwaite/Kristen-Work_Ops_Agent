@@ -3,7 +3,7 @@
 _Last updated: 2026-04-21_
 
 ## AI & Innovation
-- **Adobe Analytics Helper Agent** — [OWNER] personally built an AI agent in both Copilot and [PROPRIETARY LLM] (proprietary AI) that enables users to self-serve Adobe Analytics reporting by referencing [EMPLOYER]'s actual implementation, and understand downstream data feeds in [DATA TOOL]. Reduces dependency on the analytics team for routine reporting questions.
+- **Adobe Analytics Helper Agent** — [OWNER] personally built an AI agent in both Copilot and [PROPRIETARY LLM] (proprietary AI) that enables users to self-serve Adobe Analytics reporting by referencing [EMPLOYER]'s actual implementation, and understand downstream data feeds in Snowflake. Reduces dependency on the analytics team for routine reporting questions.
 
 ## Delivery
 - **Global Digital Performance Dashboard** — scoped, requirements finalized, BI sprint kicked off, UAT completed April 21, business release May 8

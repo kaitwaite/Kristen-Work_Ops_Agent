@@ -28,8 +28,8 @@ _Last updated: 2026-04-27_
 - [ ] **[STAKEHOLDER]** → Share service management application link with [OWNER] _(Apr 24 SF L1)_
 - [ ] **[STAKEHOLDER]** → Create GBS accounts after training completion _(Apr 24 SF L1)_
 - [ ] **GBS team (Ivan/[STAKEHOLDER])** → Assess capacity and resource needs for SF L1 support _(Apr 24 SF L1)_
-- [ ] **[STAKEHOLDER]/[STAKEHOLDER]** → Provide [DATA TOOL] docs before next technical session
+- [ ] **[STAKEHOLDER]/[STAKEHOLDER]** → Provide Snowflake docs before next technical session
 - [ ] **[STAKEHOLDER]** → Schedule follow-up with [MANAGER], [STAKEHOLDER], NAM team (Loyalty)
 - [ ] **BI team** → Awaiting finalized requirements for 2-week dev sprint
 - [ ] **Vendor ([ANALYTICS TOOL])** → Send workspace list + export landing domain segmentation data
-- [ ] **[STAKEHOLDER]'s team** → [DATA TOOL]/Cocoa access approval
+- [ ] **[STAKEHOLDER]'s team** → Snowflake/Cocoa access approval
